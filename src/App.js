@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 //own components
 import SearchBar from "./components/SearchBar";
 import AppToolBar from "./components/AppToolBar";
+import WeatherTable from "./components/WeatherTable";
+import CurrentWeather from "./components/CurrentWeather";
 
 //MUI components
 import CssBaseline from "@mui/material/CssBaseline";
@@ -44,7 +46,7 @@ const App = () => {
 
       }
       useEffect(() => {
-        getWeather("nordkapp");
+        getWeather("honningsvåg");
       }, []);
 
   return (
@@ -56,6 +58,8 @@ const App = () => {
           Weather app
         </Typography>
         <SearchBar />
+        <CurrentWeather />
+        <WeatherTable />
       </main>
     </>
   );
